@@ -1,0 +1,159 @@
+
+/*----------------------------------------------------------------------------
+INICIO NOVEDADES HOME*/
+.novedades {
+
+	width: 75%;
+	background-color: white;
+	opacity: 0.7;
+	
+	text-align: center;
+	margin-left: 13%;
+	bottom: 1em;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 1fr);
+	gap: 1em;
+	padding: 1rem;
+	row-gap: 4em;
+	h1 {
+        text-align: center;
+        font-size: 5em;
+        margin-left: center;
+        z-index: 99;
+        grid-column-start: 1;
+        grid-column-end: 4;       
+    }
+    p {
+        a {
+            font-size: 1.5em;
+            color: salmon;
+            &:hover{
+                color: red;
+            }
+        }
+        z-index: 99;
+        padding: 2em;
+        text-align: justify;
+       
+        align-self: center;
+        justify-self: left;
+        &::first-letter{
+            text-transform: capitalize;
+            color: #ee3139;
+            font-size: 2em;
+        }
+    }
+    img{
+        justify-self: center;
+        align-self: center;   
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }	
+}
+
+.img_iz{
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.img_der{
+	grid-column-start: 3;
+	grid-column-end: 4;
+}
+.p_der{
+	grid-column-start: 2;
+	grid-column-end: 4;
+	justify-self: left;
+	align-self:stretch;
+}
+.p_iz{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	justify-self: right	;
+}
+ /* INICIO PRUEBA LOADER */
+ .loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('images/pageLoader.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+
+}
+.loader div{
+	position: relative;
+	padding: 10px;
+    left: 50%;
+    top: 50%;
+    
+}
+
+@media screen and (max-width : 600px){
+    .novedades{
+		margin-top: 100px;
+
+        grid-template-columns: 1fr;
+        p img{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            
+            row-gap: 0;
+            gap: 0;
+        }
+        border: 4px solid salmon;
+        
+        
+	}	
+}
+
+
+@media screen and (max-width : 768px){
+    .menu>li>a{
+		
+		font-size: 13px;
+	}	
+	.novedades
+	{
+		width:100%;
+		margin: 0%;
+		grid-template-columns: 1fr;
+        p{
+			grid-column-start: 1;
+			grid-column-end: 2;	
+		}
+        img {
+            grid-column-start: 1;
+			grid-column-end: 2;	  
+        }
+        
+		
+		
+	}
+}
+@media screen and (min-width: 768px) and (max-width : 1024px){
+.menu{
+    li{
+        a{
+            font-size: 13px;
+        }
+    }
+}
+.novedades
+	{
+		width:100%;
+		margin: 0%;
+	p{
+        border: 4px solid black;
+       
+    }	
+	}
+}
+
+/* FIN PRUEBA LOADER */ 
+
+/*FIN DE NOVEDADES
+------------------------------------------------
+*/

@@ -1,0 +1,94 @@
+
+/*INICIO DE FOOTER (PENSANDO SACAR UBICACION DEL FOOTER)
+*/
+
+.pie {
+	background-color:#26272b;
+    color:#737373;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+    max-width: 100em;
+    margin: 20px auto auto auto;
+    text-align: center;
+	border-radius: 48px 48px 0px 0px;
+	-webkit-border-radius: 48px 48px 0px 0px;
+	-moz-border-radius: 48px 48px 0px 0px;
+	ul   
+    {
+    list-style: none;	
+    top: 0;
+    margin: auto;	
+    }	
+}
+.pie 
+.seguinos {
+    li{
+        i{
+            a{
+                text-decoration: none;
+                color: #737373;
+                &:hover{
+                    text-decoration: none;
+	                color:rgb(140, 77, 212);
+                }
+            }
+        }
+    }
+}
+
+.ubicacion{
+	
+display: flex;
+flex-direction: column;
+	
+}
+#contacto{
+display: flex;
+flex-direction: column;
+
+		
+}
+#subconta
+{
+	color: white;
+	font-size: 2em;
+}
+#seg
+{
+	color: white;
+	font-size: 2em;
+}
+#sububi{
+	color: white;
+	font-size: 2em;
+}
+
+.ubicacion ul li  a {
+	text-decoration: none;
+  color: #737373;
+  &:hover{
+    text-decoration: none;
+	color:rgb(140, 77, 212);
+  }
+}
+
+
+/*FIN INICIO DE FOOTER (PENSANDO SACAR UBICACION DEL FOOTER)
+*/
+@media screen and (max-width : 768px){
+    .pie{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media screen and (max-width : 600px){
+    .pie{
+		grid-template-columns: repeat(1,1fr);
+		padding: 30px;
+		
+	}
+
+}
+

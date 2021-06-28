@@ -1,0 +1,992 @@
+:root
+{
+--fuente-menu:'Dosis'
+}
+
+
+
+/*FUENTES IMPORTADAS*/
+
+@font-face {
+	font-family: Karate;
+	src: url(../fuentes/Karate.ttf);
+}
+html
+{
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+/*Fuentes importadas
+-----------------------------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+body {
+	background-color: #8EC5FC;
+	background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+
+	min-height: 100%;
+
+	background-size:contain;
+}
+
+header {
+	width: 100%;
+
+	position: relative;
+
+}
+
+/*FIN DE CONFIGURACION GENERAL,BODY,HEADER
+----------------------------------------------------------------------------------
+BOTON VOLVER INICIO*/
+
+#volver {
+	transition-duration: .5s ;
+	transition-property: all;
+	border-radius: 3em;
+	bottom: 20px;
+	right: 20px;
+	position: fixed;
+	text-align: center;
+	font-size: 2em;
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	-webkit-box-shadow: 0px 0px 10px 4px rgba(64, 56, 56, 0.75);
+-moz-box-shadow: 0px 0px 10px 4px rgba(64, 56, 56, 0.75);
+box-shadow: 0px 0px 10px 4px rgba(64, 56, 56, 0.75);
+}
+#volver:active
+{
+	transition-duration: .5s ;
+	transition-property: all;
+	scroll-behavior:initial;	
+}
+@keyframes anim {
+	0% { transform:rotate(30deg); } 
+	100% {transform: rotate(-30deg); }
+}
+#volver:hover {
+scroll-behavior: smooth;
+	transition-duration: .5s ;
+	transition-property: all;
+	background-color: #d62f2f;
+	
+	border-radius: 3em;
+	bottom: 20px;
+	right: 20px;
+	position: fixed;
+	text-align: center;
+	font-size: 3em;
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	-webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.75);
+animation: anim .5s infinite;
+animation-direction: alternate;
+}
+
+/*FIN DE BOTON DE INICIO
+-------------------------------------------------------
+INICIO DE ACOMODO DE LOGEO*/
+
+
+/*FIN DE ACOMODO DE LOGEO
+------------------------------------------------------------------------------------------------------
+INICIO DE MENU DESPLEGABLE*/
+.navegacion {
+	width: 100%;
+	top: 0;
+	background: #fff;
+	position: fixed;
+	z-index: 100;
+	display: grid;
+	grid-auto-rows: 60px;
+	grid-template-columns: 4fr 1fr 4fr;
+	
+	
+	
+
+}
+.navegacion img{
+border-radius: 50%;
+width: 9vh;
+
+align-self: center;
+justify-self: center;
+
+
+}
+.menu li {
+	padding: 10px
+}
+.logeo{
+	
+justify-self: right;
+margin-top: 10px;
+font-family: Arial, Helvetica, sans-serif	
+}
+.logeo a {
+	padding: 15px;
+
+}
+
+/*FIN DE MENU DESPLEGABLE
+--------------------------------------------------------------------
+INICIO DE SIMULADOR DE SLIDER*/
+.slider {
+	width: 100%;
+
+
+}
+
+.slider ul {
+	
+	list-style: none;
+	display: flex;
+	
+	
+
+}
+.slider ul li{
+	width: 100vh;
+}
+.fotos li a  {
+	width: 100%;
+}
+.fotos li a img{
+	
+	height: 550px;
+	top: 6%;
+	padding: 1em 1em 1em 1em;
+	background-color: ivory;
+	object-fit: cover;
+	width: 100vh;
+	
+
+}
+
+/*----------------------------------------------------------------------------
+INICIO NOVEDADES HOME*/
+.novedades {
+
+	width: 75%;
+	background-color: white;
+	opacity: 0.7;
+	
+	text-align: center;
+	margin-left: 13%;
+	bottom: 1em;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 1fr);
+	gap: 1em;
+	padding: 1rem;
+	row-gap: 4em;
+	
+	
+
+}
+
+.novedades h1 {
+	text-align: center;
+	font-size: 5em;
+	margin-left: center;
+	z-index: 99;
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	
+}
+
+.novedades p {
+	z-index: 99;
+	padding: 2em;
+	text-align: justify;
+	margin-left: auto;
+	
+
+}
+.novedades img{
+	justify-self: center;
+	align-self: center;
+	
+}
+
+.img_iz{
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.p_der{
+	grid-column-start: 2;
+	grid-column-end: 4;
+	justify-self: left;
+	align-self:stretch;
+}
+.img_der{
+	grid-column-start: 3;
+	grid-column-end: 4;
+}
+.p_iz{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	justify-self: right	;
+}
+
+/*FIN DE NOVEDADES
+------------------------------------------------
+INICIO DE FOOTER (PENSANDO SACAR UBICACION DEL FOOTER)
+*/
+
+.pie {
+	background-color:#26272b;
+  color:#737373;
+  display: grid;
+grid-template-columns: repeat(3,1fr);
+  width: 90%;
+  max-width: 100em;
+  margin: 20px auto auto auto;
+ 
+  text-align: center;
+  
+  
+	border-radius: 48px 48px 0px 0px;
+	-webkit-border-radius: 48px 48px 0px 0px;
+	-moz-border-radius: 48px 48px 0px 0px;
+	
+	
+}
+.pie ul   
+{
+list-style: none;	
+top: 0;
+margin: auto;
+	
+}
+
+.seguinos li i a
+{
+	text-decoration: none;
+	color: #737373;
+}
+.seguinos li i a:hover
+{
+	text-decoration: none;
+	color:rgb(140, 77, 212);
+}
+.ubicacion{
+	
+display: flex;
+flex-direction: column;
+	
+}
+#contacto{
+display: flex;
+flex-direction: column;
+
+		
+}
+#subconta
+{
+	color: white;
+	font-size: 2em;
+}
+#seg
+{
+	color: white;
+	font-size: 2em;
+}
+#sububi{
+	color: white;
+	font-size: 2em;
+}
+
+.ubicacion ul li  a {
+	text-decoration: none;
+  color: #737373;
+}
+.pie ul ul li  a:hover {
+	text-decoration: none;
+	color:rgb(140, 77, 212);
+}
+
+/*FIN INICIO DE FOOTER (PENSANDO SACAR UBICACION DEL FOOTER)
+*/
+
+
+
+/*------------------------------------------------------------------------------------------------------------
+PRUEBAS INGRESAR*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+
+
+.container {
+  
+  height: 100vh;
+  display: grid;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  place-items: center;
+  
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f4f4f4;
+  width: 100%;
+  max-width: 400px;
+  padding: 2em;
+  border-radius: 20px;
+  box-shadow: 
+    40px 40px 80px rgba(0, 0, 0, 0.25);
+}
+
+.card-title {
+  font-size: 35px;
+  color: #565656;
+  align-items: center;
+}
+
+.card-subtitle {
+  color: #565656;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.card-input-container {
+  position: relative;
+  margin: 0.5rem 0 2rem;
+  width: 100%;
+}
+
+.card-form label {
+  color: #b6b6b6;
+}
+
+.card-input-container input::placeholder {
+  color: #b6b6b6;
+}
+
+.card-input-container input,
+.card-button {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+}
+
+.card-input-container input {
+  padding: 1em 2em 1em 4em;
+  font-size: 14px;
+  color: #b6b6b6;
+  background: #f4f4f4;
+  box-shadow: -10px -10px 20px rgb(255, 255, 255),
+    10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-input-container input:focus {
+  box-shadow: inset -5px -5px 10px rgb(255, 255, 255),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-button {
+  background: #565656;
+  padding: 1em;
+  color: #f4f4f4;
+  cursor: pointer;
+  box-shadow: -10px -10px 20px rgb(255, 255, 255),
+    10px 10px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+.card-button:focus,
+.card-button:hover {
+  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.4),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card-forgot-password {
+  text-align: center;
+  font-size: 12px;
+  color: #b6b6b6;
+}
+
+.card-forgot-password a {
+  color: #565656;
+}
+.card-forgot-password a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card-input-container::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  left: 1.3rem;
+  top: 0.8rem;
+  font-size: 20px;
+  color: #FCB7B7;
+}
+
+.card-input-container.username::after {
+  content: "\f007";
+}
+
+.card-input-container.password::after {
+  content: "\f023";
+}
+
+.card-input-container.dojo::after {
+	content: "\f024";
+  }
+
+ /* INICIO PRUEBA LOADER */
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('images/pageLoader.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+
+}
+.loader div{
+	position: relative;
+	padding: 10px;
+    left: 50%;
+    top: 50%;
+    
+}
+/* FIN PRUEBA LOADER */ 
+
+  /* PRUEBA PARA REGISTRARSE
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  */
+  
+/*----------------------------------------
+ INICIO DE PAGINA DOJO-KUN */
+ .dojo_kun
+ {
+	height: 100vh;
+  display: grid;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  place-items: center;
+  margin-top: 5em;
+  margin-bottom: 10em;
+  
+ }
+ 
+.dojo_kun-contenedor{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #E0F3DC;
+	width: 70%;
+	
+	padding: 2em;
+	border-radius: 20px;
+	box-shadow: 
+	  40px 40px 80px rgba(0, 0, 0, 0.25);
+	  
+ 				
+ }
+ .dojo_kun-titulo
+ {
+ 	font-size: 3.5em;	
+	 font-weight:600;	
+	 letter-spacing: .05em;	
+	 
+	 font-family: 'Dosis';
+	 color: transparent;
+background: #6a1308;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+background-clip: text;
+text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+ }
+ .dojo_kun-lista 
+ {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	font-family: 'Noto Sans JP';
+	
+				
+ }
+
+ .dojo_kun-lista li
+ {
+	 display: flex;
+	 flex-direction: column;
+ 		list-style : none ;	
+		color: #812216 ;
+		font-size: 2em;
+		letter-spacing: .05em;
+
+		
+		font-weight:600;
+		font-family: 'Noto Sans JP';
+		text-shadow: 4px 3px 10px rgba(0, 0, 0, 0.9);
+		
+ }
+ 
+ .dojo_kun-jap:hover , .dojo_kun-esp:hover
+ {
+	 display: flex;
+	 flex-direction: column;
+ 		list-style : none ;	
+		color: #C08314 ;
+		font-size: 2.4em;
+		letter-spacing: .03em;
+		padding: .05em;
+		font-weight:550;
+		transition-property: all;
+		transition-duration: 1s;
+		transition-delay: .3s;
+		cursor: pointer;
+		
+	}
+
+ .dojo_kun-esp{
+   padding-top: .5em;
+	}		
+ .dojo_kun-jap{
+	padding-bottom: .5em;	
+ }
+/*FIN PAGINA DOJO-KUN
+----------------------------------------------------------------------------
+SECCION TERMINOLOGIA
+---------------------------------------------------------------------------------------------------------------*/
+ .terminologia{
+
+	display: grid;
+	
+	
+	grid-gap: 10px;
+	
+	margin: auto;
+	background-color: aliceblue;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow: 
+	 60px 60px 60px 60px rgba(0, 0, 0, 0.25);
+	margin: 30px;
+	margin-top: 6rem;
+	font-family: 'Noto Sans JP', sans-serif;
+ }
+ .terminologia > ul{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+	text-align: left;
+	border:solid chocolate;
+	padding: 10px;
+	margin: 10px;
+	list-style: none;
+	font-size: 2rem;
+	
+	border-radius: 20px;
+	box-shadow: 
+	 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+ }
+ .terminologia-titulo{
+	text-align: center;
+	font-size: 4rem;
+	padding: 1rem;
+	font-weight: 700;
+	 text-shadow: 5px 1px 2px rgba(150, 150, 150, 1);
+	
+ }
+ .terminologia > ul > li:first-child {
+	 text-align: center;
+	 color: #d50606;
+	 text-decoration: underline;
+	 font-size: 3rem;
+	 padding: 20px;
+	 grid-column-start: 1;
+	 grid-column-end: 3;
+	 border:none;
+	 text-shadow: 3px 0px 3px rgb(56, 42, 42);
+	 
+ }
+.terminologia ul li
+{
+	border:solid darkgoldenrod;
+}
+/*FIN SECCION TERMINOLOGIA
+-----------------------------------------------------------------------------------------------------------------
+INICIO HISTORIA KARAT*/
+.historia{
+	display: grid;
+	margin: 3rem;
+	gap: 1em;
+		
+	background-image:url(../imagenes-texturas/t8.jpg);
+	
+	
+font-family: var(--fuente-menu);
+
+}
+.historia_cont{
+
+	display: grid;
+	margin: 2em;
+	
+	opacity: 0.9;
+}
+
+.historia_cont > h1
+{
+	font-size: 3.5em ;
+
+	
+	text-align: center;
+	
+	
+}
+.historia_cont h2{
+
+padding: 20px;
+font-size: 2.5em;
+color: #453A66;
+}
+.historia_cont h3{
+background-color: #FFF7F7;
+padding: 20px 20px 20px 0 ;
+font-size: 2em;
+color: gray;
+}
+.historia_cont > h3 > button{
+	background-color: #FFF7F7;
+	padding: 20px 20px 20px 0 ;
+	font-size: 1em;
+	
+	color: gray;
+	}
+
+
+.historia_cont  p
+{
+background-color: #FFF7F7;
+backface-visibility: 3;
+color: #004400;
+font-size: 20px;
+margin: 0.5em;
+padding: 10px;
+
+}
+
+.historia-p1::first-letter {
+	font-size: 60px;
+	color: brown;
+	float: left;
+	
+}
+
+/*FIN DE HISTORIA KARATE DO
+--------------------------------------------------------------------
+INICIO DE ACOMODO DOJOS*/
+.lugares-dojos{
+display: grid;
+
+
+}
+.lugares-dojos-head{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	background-color: rgb(140, 77, 212);
+	
+	
+}
+.dojos-img{
+	margin-top: 10%;
+	width: 100%;
+	padding: 10px;
+	height: 350px;
+	object-fit: cover;
+	
+}
+.lugares-dojos-sensei{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	
+}
+.lugares-dojos-sensei h1{
+	color: #6a1308;
+	font-family:'Karate' ;
+	font-size: 10vh;
+	
+}
+.lugares-dojos-sensei h2{
+	color: #6e5551;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+	font-size: 5vh;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+.lugares-dojos-mapas{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+align-items: center;
+	
+}
+
+.lugares-dojos-mapas h3{
+	text-align: center;
+	margin: 10px;
+	font-size: 4vh;
+	border:solid rgba(0, 0, 0, 0.231);
+	
+}
+.lugares-dojos-foot{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+background-color: rgb(140, 77, 212);
+}
+
+
+
+
+/* FIN DE SECCION DOJOS
+--------------------------------------------------------- 
+INICIO DE SECCION VIAJES*/
+.container-viajes{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);	
+	gap: 10px;
+	padding: 20px;
+	width: 90%;
+	margin: auto;
+	background-color: thistle;
+	
+}
+.container-viajes img:nth-child(2){
+
+	grid-row-start: span 2;
+}
+.container-viajes img:nth-child(15){
+
+	grid-row-start: span 2;
+}
+.container-viajes img:nth-child(12){
+
+	grid-row-start: span 2;
+}
+.container-viajes img:nth-child(26){
+
+	grid-column-start: span 2;
+}
+#torn-39{
+	grid-column-start: span 2;
+}
+#torn-1{
+	grid-column-start: span 2;
+}
+#torn-2{
+	grid-row-start: span 1;
+}
+
+
+.container-viajes img{
+
+border: 4px solid white;
+object-fit: cover;
+height: 100%;
+
+}
+
+img
+	{
+		transition: all;
+		transition-duration: 1s;
+		width: 100%;
+		
+	}
+	img:hover{
+transition: all;
+transition-duration: .5s;
+background-color: #812216;
+
+-webkit-transform:scale(1.10);
+-moz-transform:scale(1.10);
+-ms-transform:scale(1.10);
+-o-transform:scale(1.10);
+transform:scale(1.10);
+-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+box-shadow: 5px 5px 15px 5px #000000;
+
+	}
+.title-galeria
+{
+
+	transition: all;
+	transition-duration:3s ;
+	
+text-align: center;
+	font-size: 50px;
+	padding: 10px;
+	margin: 40px;
+	background-color: #b5bbba;
+	color: #c41700;
+	-webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+	
+text-shadow: 2px 2px 2px #ffffff;
+
+	
+}
+
+
+
+
+
+
+/*INTENTO DE RESPONSIVE PARA TABLET*/
+
+
+@media screen and (min-width: 768px) and (max-width : 1024px){
+	.menu>li>a{
+		
+		font-size: 13px;
+	}	
+	.novedades
+	{
+		width:100%;
+		margin: 0%;
+		
+	}
+	.dojos-img{
+		margin-top: 10%;
+		width: 100%;
+		
+		height: 230px;
+		background-color: rgb(81, 77, 212);
+		
+	}
+	.columnas-im{
+		flex: 50%;
+		
+		
+		}
+		.container-viajes{
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+	
+}
+@media screen and (max-width : 768px) {
+
+	.menu>li>a{
+		
+		font-size: 13px;
+	}	
+	.novedades
+	{
+		width:100%;
+		margin: 0%;
+		grid-template-columns: 1fr;
+		
+		
+	}
+	.dojos-img{
+		margin-top: 10%;
+		width: 100%;
+		
+		height: 200px;
+		background-color: red;
+		
+	}	
+	.columnas-im{
+		flex: 100%;
+		width: 100%;
+		
+		}
+		.container-viajes{
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.pie{
+			grid-template-columns: repeat(2,1fr);
+		}
+		.novedades p{
+			grid-column-start: 1;
+			grid-column-end: 2;
+		
+			
+		}
+		.novedades img{
+			display: none;
+		
+			
+		}
+}
+@media screen and (max-width : 600px){
+
+	.container-viajes{
+		grid-template-columns: repeat(1, 1fr);
+		width: 100%;
+	}
+	.pie{
+		grid-template-columns: repeat(1,1fr);
+		padding: 30px;
+		
+	}
+	.novedades{
+		margin-top: 100px;
+	}
+
+	.novedades img{
+		display: none;
+	
+		
+	}
+	.novedades p{
+		grid-column-start: 1;
+		grid-column-end: 2;
+	
+		
+	}
+	.slider{
+		display: none;
+	}
+	.logo{
+		display: none;
+	}
+}

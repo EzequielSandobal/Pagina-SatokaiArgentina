@@ -1,0 +1,897 @@
+@charset "UTF-8";
+/*REINICIO DE PAGINA GENERAL
+----------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  min-height: 100%;
+  background-size: contain;
+}
+
+/*FIN DE REINICIO DE PAGINA GENERAL*/
+/*INICIO DE HEADER
+--------------------------------------------*/
+header {
+  width: 100%;
+  position: relative;
+}
+
+/*
+INICIO DE MENU DESPLEGABLE*/
+.navegacion {
+  width: 100%;
+  top: 0;
+  background: #fff;
+  position: fixed;
+  z-index: 100;
+  display: grid;
+  grid-auto-rows: 60px;
+  grid-template-columns: 4fr 1fr 4fr;
+}
+.navegacion img {
+  border-radius: 50%;
+  width: 9vh;
+  align-self: center;
+  justify-self: center;
+}
+
+.menu li {
+  padding: 10px;
+}
+
+.logeo {
+  justify-self: right;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logeo a {
+  padding: 15px;
+}
+
+.logo {
+  margin-top: 10px;
+}
+
+/*FIN DE MENU DESPLEGABLE
+FIN DE HEADER
+-----------------------------------------------------*/
+@media screen and (max-width: 600px) {
+  .slider {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logeo {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .navegacion {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .menu > li > a {
+    font-size: 2.5vh;
+  }
+
+  .navegacion {
+    height: 8vh;
+  }
+}
+/*SECCION HISTORIA
+----------------------------------------------------------------------------------------------------*/
+.historia {
+  display: grid;
+  margin: 3rem;
+  gap: 1em;
+  background-image: url(../imagenes-texturas/t8.jpg);
+  font-family: "Dosis";
+}
+
+.historia-p1::first-letter {
+  font-size: 60px;
+  color: brown;
+  float: left;
+}
+
+.historia_cont {
+  display: grid;
+  margin: 2em;
+  opacity: 0.9;
+}
+.historia_cont h1 {
+  font-size: 3.5em;
+  text-align: center;
+}
+.historia_cont h2 {
+  padding: 20px;
+  font-size: 2.5em;
+  color: #453A66;
+}
+.historia_cont h3 {
+  background-color: #FFF7F7;
+  padding: 20px 20px 20px 0;
+  font-size: 2em;
+  color: gray;
+}
+.historia_cont h3 button {
+  background-color: #FFF7F7;
+  padding: 20px 20px 20px 0;
+  font-size: 1em;
+  color: gray;
+}
+.historia_cont p {
+  background-color: #FFF7F7;
+  backface-visibility: 3;
+  color: #004400;
+  font-size: 20px;
+  margin: 0.5em;
+  padding: 10px;
+}
+
+/*FIN SECCION HISTORIA
+----------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1280px) {
+  .historia_cont {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 600px) {
+  .historia {
+    margin: 30px 0;
+  }
+}
+/*BOTON VOLVER INICIO
+-----------------------------------------------------------*/
+#volver {
+  transition-duration: 0.5s;
+  transition-property: all;
+  border-radius: 3em;
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+  text-align: center;
+  font-size: 2em;
+  z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(64, 56, 56, 0.75);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(64, 56, 56, 0.75);
+  box-shadow: 0px 0px 10px 4px rgba(64, 56, 56, 0.75);
+}
+#volver:active {
+  transition-duration: 0.5s;
+  transition-property: all;
+  scroll-behavior: initial;
+}
+#volver:hover {
+  scroll-behavior: smooth;
+  transition-duration: 0.5s;
+  transition-property: all;
+  background-color: #d62f2f;
+  border-radius: 3em;
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+  text-align: center;
+  font-size: 3em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.75);
+  animation: anim 0.5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes anim {
+  0% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+/*FIN DE BOTON DE INICIO
+-------------------------------------------------------
+*/
+/*----------------------------------------------------------------------------
+INICIO NOVEDADES HOME*/
+.novedades {
+  width: 75%;
+  background-color: white;
+  opacity: 0.7;
+  text-align: center;
+  margin-left: 13%;
+  bottom: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  gap: 1em;
+  padding: 1rem;
+  row-gap: 4em;
+}
+.novedades h1 {
+  text-align: center;
+  font-size: 5em;
+  margin-left: center;
+  z-index: 99;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.novedades p {
+  z-index: 99;
+  padding: 2em;
+  text-align: justify;
+  align-self: center;
+  justify-self: left;
+}
+.novedades p a {
+  font-size: 1.5em;
+  color: salmon;
+}
+.novedades p a:hover {
+  color: red;
+}
+.novedades p::first-letter {
+  text-transform: capitalize;
+  color: #ee3139;
+  font-size: 2em;
+}
+.novedades img {
+  justify-self: center;
+  align-self: center;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.img_iz {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.img_der {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.p_der {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  justify-self: left;
+  align-self: stretch;
+}
+
+.p_iz {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-self: right;
+}
+
+/* INICIO PRUEBA LOADER */
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url("images/pageLoader.gif") 50% 50% no-repeat #f9f9f9;
+  opacity: 0.8;
+}
+
+.loader div {
+  position: relative;
+  padding: 10px;
+  left: 50%;
+  top: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .novedades {
+    margin-top: 100px;
+    grid-template-columns: 1fr;
+    border: 4px solid salmon;
+  }
+  .novedades p img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    row-gap: 0;
+    gap: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu > li > a {
+    font-size: 13px;
+  }
+
+  .novedades {
+    width: 100%;
+    margin: 0%;
+    grid-template-columns: 1fr;
+  }
+  .novedades p {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .novedades img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu li a {
+    font-size: 13px;
+  }
+
+  .novedades {
+    width: 100%;
+    margin: 0%;
+  }
+  .novedades p {
+    border: 4px solid black;
+  }
+}
+/* FIN PRUEBA LOADER */
+/*FIN DE NOVEDADES
+------------------------------------------------
+*/
+/*INICIO DE FOOTER (PENSANDO SACAR UBICACION DEL FOOTER)
+*/
+.pie {
+  background-color: #26272b;
+  color: #737373;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  max-width: 100em;
+  margin: 20px auto auto auto;
+  text-align: center;
+  border-radius: 48px 48px 0px 0px;
+  -webkit-border-radius: 48px 48px 0px 0px;
+  -moz-border-radius: 48px 48px 0px 0px;
+}
+.pie ul {
+  list-style: none;
+  top: 0;
+  margin: auto;
+}
+
+.pie .seguinos li i a {
+  text-decoration: none;
+  color: #737373;
+}
+.pie .seguinos li i a:hover {
+  text-decoration: none;
+  color: #8c4dd4;
+}
+
+.ubicacion {
+  display: flex;
+  flex-direction: column;
+}
+
+#contacto {
+  display: flex;
+  flex-direction: column;
+}
+
+#subconta {
+  color: white;
+  font-size: 2em;
+}
+
+#seg {
+  color: white;
+  font-size: 2em;
+}
+
+#sububi {
+  color: white;
+  font-size: 2em;
+}
+
+.ubicacion ul li a {
+  text-decoration: none;
+  color: #737373;
+}
+.ubicacion ul li a:hover {
+  text-decoration: none;
+  color: #8c4dd4;
+}
+
+/*FIN INICIO DE FOOTER (PENSANDO SACAR UBICACION DEL FOOTER)
+*/
+@media screen and (max-width: 768px) {
+  .pie {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .pie {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 30px;
+  }
+}
+/*------------------------------------------------------------------------------------------------------------
+PRUEBAS INGRESAR*/
+.container {
+  height: 100vh;
+  display: grid;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  place-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f4f4f4;
+  width: 100%;
+  max-width: 400px;
+  padding: 2em;
+  border-radius: 20px;
+  box-shadow: 40px 40px 80px rgba(0, 0, 0, 0.25);
+}
+
+.card-title {
+  font-size: 35px;
+  color: #565656;
+  align-items: center;
+}
+
+.card-subtitle {
+  color: #565656;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.card-input-container {
+  position: relative;
+  margin: 0.5rem 0 2rem;
+  width: 100%;
+}
+.card-input-container::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  left: 1.3rem;
+  top: 0.8rem;
+  font-size: 20px;
+  color: #FCB7B7;
+}
+
+.card-form label {
+  color: #b6b6b6;
+}
+
+.card-input-container input::placeholder {
+  color: #b6b6b6;
+}
+
+.card-input-container input,
+.card-button {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+}
+
+.card-input-container input {
+  padding: 1em 2em 1em 4em;
+  font-size: 14px;
+  color: #b6b6b6;
+  background: #f4f4f4;
+  box-shadow: -10px -10px 20px white, 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.card-input-container input:focus {
+  box-shadow: inset -5px -5px 10px white, inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-button {
+  background: #565656;
+  padding: 1em;
+  color: #f4f4f4;
+  cursor: pointer;
+  box-shadow: -10px -10px 20px white, 10px 10px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1.5rem;
+}
+.card-button:focus, .card-button:hover {
+  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.4), inset 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card-forgot-password {
+  text-align: center;
+  font-size: 12px;
+  color: #b6b6b6;
+}
+.card-forgot-password a {
+  color: #565656;
+}
+.card-forgot-password a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card-input-container.username::after {
+  content: "";
+}
+
+.card-input-container.password::after {
+  content: "";
+}
+
+.card-input-container.dojo::after {
+  content: "";
+}
+
+/*FIN DE INGRESAR Y REGISTRARSE*/
+/*----------------------------------------
+ INICIO DE PAGINA DOJO-KUN */
+.dojo_kun {
+  height: 100vh;
+  display: grid;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  place-items: center;
+  margin-top: 5em;
+  margin-bottom: 10em;
+}
+
+.dojo_kun-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #E0F3DC;
+  width: 70%;
+  padding: 2em;
+  border-radius: 20px;
+  box-shadow: 40px 40px 80px rgba(0, 0, 0, 0.25);
+}
+
+.dojo_kun-titulo {
+  font-size: 3.5em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-family: "Dosis";
+  color: transparent;
+  background: #6a1308;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+.dojo_kun-lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Noto Sans JP";
+}
+.dojo_kun-lista li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  color: #812216;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-family: "Noto Sans JP";
+  text-shadow: 4px 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+.dojo_kun-esp, .dojo_kun-jap {
+  padding-top: 0.5em;
+}
+.dojo_kun-esp:hover, .dojo_kun-jap:hover {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  color: #C08314;
+  font-size: 2.4em;
+  letter-spacing: 0.03em;
+  padding: 0.05em;
+  font-weight: 550;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0.3s;
+  cursor: pointer;
+}
+
+/*FIN PAGINA DOJO-KUN
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  .dojo_kun-contenedor {
+    width: 100%;
+  }
+  .dojo_kun-contenedor li {
+    font-size: 1.6em;
+  }
+
+  .dojo_kun {
+    height: 45%;
+  }
+}
+/*INICIO SECCION TERMINOLOGIA*/
+.terminologia {
+  display: grid;
+  grid-gap: 10px;
+  margin: auto;
+  background-color: aliceblue;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 60px 60px 60px 60px rgba(0, 0, 0, 0.25);
+  margin: 30px;
+  margin-top: 6rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.terminologia > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  text-align: left;
+  border: solid chocolate;
+  padding: 10px;
+  margin: 10px;
+  list-style: none;
+  font-size: 2rem;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.terminologia-titulo {
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem;
+  font-weight: 700;
+  text-shadow: 5px 1px 2px #969696;
+}
+
+.terminologia > ul > li:first-child {
+  text-align: center;
+  color: #d50606;
+  text-decoration: underline;
+  font-size: 3rem;
+  padding: 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border: none;
+  text-shadow: 3px 0px 3px #382a2a;
+}
+
+.terminologia ul li {
+  border: solid darkgoldenrod;
+}
+
+/*FIN SECCION TERMINOLOGIA*/
+/*INICIO SECCION DOJOS*/
+.lugares-dojos {
+  display: grid;
+}
+
+.lugares-dojos-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #8c4dd4;
+}
+
+.dojos-img {
+  margin-top: 10%;
+  width: 100%;
+  padding: 10px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.lugares-dojos-sensei {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.lugares-dojos-sensei h1 {
+  color: #6a1308;
+  font-family: "Karate";
+  font-size: 10vh;
+}
+
+.lugares-dojos-sensei h2 {
+  color: #6e5551;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 5vh;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.lugares-dojos-mapas {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+.lugares-dojos-mapas h3 {
+  text-align: center;
+  margin: 10px;
+  font-size: 4vh;
+  border: solid rgba(0, 0, 0, 0.231);
+}
+
+.lugares-dojos-foot {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #8c4dd4;
+}
+
+/*FIN DE SECCION DOJOS*/
+@media screen and (max-width: 600px) {
+  .container-viajes {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dojos-img {
+    margin-top: 10%;
+    width: 100%;
+    height: 200px;
+    background-color: red;
+  }
+
+  .columnas-im {
+    flex: 100%;
+    width: 100%;
+  }
+
+  .container-viajes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .dojos-img {
+    margin-top: 10%;
+    width: 100%;
+    height: 230px;
+    background-color: #514dd4;
+  }
+
+  .columnas-im {
+    flex: 50%;
+  }
+
+  .container-viajes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*INICIO DE SECCION VIAJES Y TORNEOS*/
+.container-viajes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+  background-color: thistle;
+}
+
+.container-viajes img:nth-child(2) {
+  grid-row-start: span 2;
+}
+
+.container-viajes img:nth-child(15) {
+  grid-row-start: span 2;
+}
+
+.container-viajes img:nth-child(12) {
+  grid-row-start: span 2;
+}
+
+.container-viajes img:nth-child(26) {
+  grid-column-start: span 2;
+}
+
+#torn-39 {
+  grid-column-start: span 2;
+}
+
+#torn-1 {
+  grid-column-start: span 2;
+}
+
+#torn-2 {
+  grid-row-start: span 1;
+}
+
+.container-viajes img {
+  border: 4px solid white;
+  object-fit: cover;
+  height: 100%;
+}
+
+img {
+  transition: all;
+  transition-duration: 1s;
+  width: 100%;
+}
+
+img:hover {
+  transition: all;
+  transition-duration: 0.5s;
+  background-color: #812216;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.title-galeria {
+  transition: all;
+  transition-duration: 3s;
+  text-align: center;
+  font-size: 50px;
+  padding: 10px;
+  margin: 40px;
+  background-color: #b5bbba;
+  color: #c41700;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  text-shadow: 2px 2px 2px #ffffff;
+}
+
+/*FIN DE SECCION DE VIAJES Y TORNESO*/
+@media screen and (max-width: 600px) {
+  .container-viajes {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    grid-column-start: span 1;
+    grid-row-start: span 1;
+  }
+  .container-viajes img {
+    grid-column-start: span 1;
+    grid-row-start: span 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
