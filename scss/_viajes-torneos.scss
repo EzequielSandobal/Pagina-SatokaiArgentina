@@ -1,0 +1,129 @@
+/*INICIO DE SECCION VIAJES Y TORNEOS*/
+.container-viajes{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);	
+	gap: 10px;
+	padding: 20px;
+	width: 90%;
+	margin: auto;
+	background-color: thistle;
+	
+}
+.container-viajes img:nth-child(2){
+
+	grid-row-start: span 2;
+}
+.container-viajes img:nth-child(15){
+
+	grid-row-start: span 2;
+}
+.container-viajes img:nth-child(12){
+
+	grid-row-start: span 2;
+}
+.container-viajes img:nth-child(26){
+
+	grid-column-start: span 2;
+}
+#torn-39{
+	grid-column-start: span 2;
+}
+#torn-1{
+	grid-column-start: span 2;
+}
+#torn-2{
+	grid-row-start: span 1;
+}
+
+
+.container-viajes img{
+
+border: 4px solid white;
+object-fit: cover;
+height: 100%;
+
+}
+
+img
+	{
+		transition: all;
+		transition-duration: 1s;
+		width: 100%;
+		
+	}
+	img:hover{
+transition: all;
+transition-duration: .5s;
+background-color: #812216;
+
+-webkit-transform:scale(1.10);
+-moz-transform:scale(1.10);
+-ms-transform:scale(1.10);
+-o-transform:scale(1.10);
+transform:scale(1.10);
+-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+box-shadow: 5px 5px 15px 5px #000000;
+
+	}
+.title-galeria
+{
+
+	transition: all;
+	transition-duration:3s ;
+	
+
+@include titulos-h1(#c41700, true);	
+	padding: 10px;
+	margin: 10vh;
+	background-color: #b5bbba;
+	
+	-webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+	
+
+
+	
+}
+/*FIN DE SECCION DE VIAJES Y TORNESO*/
+@media screen and (min-width: 768px) and (max-width : 1024px){
+
+
+	.columnas-im{
+
+		flex: 50%;
+		
+		
+		}
+		.container-viajes{
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+
+}
+
+@media screen and (max-width : 768px){
+	.columnas-im{
+		flex: 100%;
+		width: 100%;
+		
+		}
+		.container-viajes{
+			grid-template-columns: repeat(2, 1fr);
+		}
+}
+@media screen and (max-width : 600px){
+    .container-viajes{
+		grid-template-columns: repeat(1, 1fr);
+		width: 100%;
+		grid-column-start: span 1;
+			grid-row-start: span 1;
+		img {
+			grid-column-start: 1;
+			grid-column-end: 2;
+		}
+	}
+	.title-galeria{
+	 @include titulos-h1(rgb(189, 101, 101))
+	}
+}

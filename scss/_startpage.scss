@@ -1,0 +1,22 @@
+/*REINICIO DE PAGINA GENERAL
+----------------------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	user-select: none;
+}
+html
+{
+	scroll-behavior: smooth;
+	height: 100%;
+}
+body {
+	background-color: #8EC5FC;
+	background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+	min-height: 100%;
+	background-size:contain;
+}
+/*FIN DE REINICIO DE PAGINA GENERAL*/
