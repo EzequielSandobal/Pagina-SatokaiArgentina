@@ -73,7 +73,19 @@ flex-direction: column;
   }
 }
 
+$redes:(
+    facebook:#3b5998,
+    whatsapp:#25D366,
+    instagram:#C13584,
+    youtube:#c4302b
+);
 
+@each $re, $color in $redes {
+.fa-#{$re}:hover{
+    color: $color;
+}   
+    
+}
 /*FIN INICIO DE FOOTER (PENSANDO SACAR UBICACION DEL FOOTER)
 */
 @media screen and (max-width : 768px){

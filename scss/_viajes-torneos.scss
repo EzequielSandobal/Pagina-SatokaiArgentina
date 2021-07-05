@@ -71,23 +71,47 @@ box-shadow: 5px 5px 15px 5px #000000;
 	transition: all;
 	transition-duration:3s ;
 	
-text-align: center;
-	font-size: 50px;
+
+@include titulos-h1(#c41700, true);	
 	padding: 10px;
-	margin: 40px;
+	margin: 10vh;
 	background-color: #b5bbba;
-	color: #c41700;
+	
 	-webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 	
-text-shadow: 2px 2px 2px #ffffff;
+
 
 	
 }
 /*FIN DE SECCION DE VIAJES Y TORNESO*/
+@media screen and (min-width: 768px) and (max-width : 1024px){
 
 
+	.columnas-im{
+
+		flex: 50%;
+		
+		
+		}
+		.container-viajes{
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+
+}
+
+@media screen and (max-width : 768px){
+	.columnas-im{
+		flex: 100%;
+		width: 100%;
+		
+		}
+		.container-viajes{
+			grid-template-columns: repeat(2, 1fr);
+		}
+}
 @media screen and (max-width : 600px){
     .container-viajes{
 		grid-template-columns: repeat(1, 1fr);
@@ -95,8 +119,11 @@ text-shadow: 2px 2px 2px #ffffff;
 		grid-column-start: span 1;
 			grid-row-start: span 1;
 		img {
-			grid-column-start: span 1;
-			grid-row-start: span 1;
+			grid-column-start: 1;
+			grid-column-end: 2;
 		}
+	}
+	.title-galeria{
+	 @include titulos-h1(rgb(189, 101, 101))
 	}
 }

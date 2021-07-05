@@ -1,1 +1,16 @@
-$fuente-menu:'Dosis'
+$fuente-menu:'Dosis';
+
+@mixin titulos-h1 ($color:gray, $sombra:false) {
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: .05em;
+    font-family: 'Dosis';
+    font-weight: 800;
+    color: $color;
+    margin: 20px;
+    @if $sombra {
+        text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+        
+    }
+   
+}

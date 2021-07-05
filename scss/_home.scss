@@ -16,8 +16,7 @@ INICIO NOVEDADES HOME*/
 	padding: 1rem;
 	row-gap: 4em;
 	h1 {
-        text-align: center;
-        font-size: 5em;
+        @include titulos-h1(rgb(53, 49, 49));	
         margin-left: center;
         z-index: 99;
         grid-column-start: 1;
@@ -70,6 +69,12 @@ INICIO NOVEDADES HOME*/
 	grid-column-start: 1;
 	grid-column-end: 3;
 	justify-self: right	;
+    
+}
+#p-med{
+    grid-row-start: 3;
+    
+    grid-row-end: 4;
 }
  /* INICIO PRUEBA LOADER */
  .loader {
@@ -90,21 +95,45 @@ INICIO NOVEDADES HOME*/
     top: 50%;
     
 }
+.logo-600{
+    display: none;
+}
+
+    
 
 @media screen and (max-width : 600px){
+    .logo-600{
+        width: 20%;
+        height: 20%;
+        margin: auto;
+        margin-top: 60px;
+        display:block;
+    }
+   .prue{
+    display: none;
+   }
     .novedades{
 		margin-top: 100px;
-
         grid-template-columns: 1fr;
+        border: 4px solid salmon;
+        row-gap: 0;
+        img{
+            width: 100%;
+            
+        }
         p img{
             grid-column-start: 1;
             grid-column-end: 2;
             
-            row-gap: 0;
-            gap: 0;
+            
+           
+        }   
+        h1{
+            font-size: 3em;
+            text-align: left;
+            font-weight: 0;
+            
         }
-        border: 4px solid salmon;
-        
         
 	}	
 }
@@ -115,6 +144,11 @@ INICIO NOVEDADES HOME*/
 		
 		font-size: 13px;
 	}	
+    #p-med{
+        grid-row-start: 5;
+        
+        grid-row-end: 6;
+    }
 	.novedades
 	{
 		width:100%;
@@ -128,8 +162,7 @@ INICIO NOVEDADES HOME*/
             grid-column-start: 1;
 			grid-column-end: 2;	  
         }
-        
-		
+       
 		
 	}
 }

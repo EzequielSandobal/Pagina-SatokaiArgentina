@@ -1,11 +1,7 @@
 /*INICIO SECCION TERMINOLOGIA*/
  .terminologia{
-
 	display: grid;
-	
-	
 	grid-gap: 10px;
-	
 	margin: auto;
 	background-color: aliceblue;
 	padding: 30px;
@@ -15,44 +11,78 @@
 	margin: 30px;
 	margin-top: 6rem;
 	font-family: 'Noto Sans JP', sans-serif;
- }
- .terminologia > ul{
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 10px;
-	text-align: left;
-	border:solid chocolate;
-	padding: 10px;
-	margin: 10px;
-	list-style: none;
-	font-size: 2rem;
-	
-	border-radius: 20px;
-	box-shadow: 
-	 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+	ul{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+			text-align: left;
+			border:solid chocolate;
+			padding: 10px;
+			margin: 10px;
+			list-style: none;
+			font-size: 2rem;
+			
+			border-radius: 20px;
+			box-shadow: 
+			 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+			 li{
+				border:solid darkgoldenrod;
+			 &:first-child {
+				text-align: center;
+				color: #d50606;
+				text-decoration: underline;
+				font-size: 2.7rem;
+				padding: 20px;
+				grid-column-start: 1;
+				grid-column-end: 3;
+				border:none;
+				text-shadow: 3px 0px 3px rgb(56, 42, 42);
+			 }
+			}
+		 }
+
  }
  .terminologia-titulo{
-	text-align: center;
-	font-size: 4rem;
+	@include titulos-h1(rgb(32, 30, 30), true);	
 	padding: 1rem;
-	font-weight: 700;
-	 text-shadow: 5px 1px 2px rgba(150, 150, 150, 1);
+	
+	 
 	
  }
- .terminologia > ul > li:first-child {
-	 text-align: center;
-	 color: #d50606;
-	 text-decoration: underline;
-	 font-size: 3rem;
-	 padding: 20px;
-	 grid-column-start: 1;
-	 grid-column-end: 3;
-	 border:none;
-	 text-shadow: 3px 0px 3px rgb(56, 42, 42);
-	 
- }
-.terminologia ul li
-{
-	border:solid darkgoldenrod;
-}
+
+
 /*FIN SECCION TERMINOLOGIA*/
+
+@media screen and (max-width:1023px) {
+	.terminologia{
+		
+		ul{
+			grid-template-columns: 1fr;
+		}
+	}
+	.terminologia ul li:first-child
+	{
+		
+		
+			grid-column-end: 2;
+		
+	}
+	
+	
+}
+@media screen and (max-width:600px){
+	.terminologia
+	{
+		margin: 0%;
+		ul {
+			font-size: 1rem;
+			li{
+				&:first-child{
+					font-size: 2.5rem;
+				}
+			}
+		}
+	} 
+	
+}
+
