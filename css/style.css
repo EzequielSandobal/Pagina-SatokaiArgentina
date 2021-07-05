@@ -85,6 +85,11 @@ FIN DE HEADER
     grid-template-columns: 1fr 1fr;
   }
 }
+@media screen and (max-width: 1024px) {
+  .logeo {
+    display: none;
+  }
+}
 @media screen and (min-width: 1280px) {
   .menu > li > a {
     font-size: 2.5vh;
@@ -334,10 +339,17 @@ INICIO NOVEDADES HOME*/
 
 @media screen and (max-width: 600px) {
   .logo-600 {
-    width: 20%;
-    height: 20%;
+    width: 100px;
+    height: 100px;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 70px;
+    display: block;
+  }
+  .logo-600 img {
+    border-radius: 50%;
+    border: 3px groove rgba(227, 20, 20, 0.86);
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: block;
   }
 

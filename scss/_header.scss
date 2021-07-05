@@ -58,6 +58,12 @@ FIN DE HEADER
 		grid-template-columns: 1fr 1fr;
 	}
 }
+@media screen and (max-width : 1024px)
+{
+	.logeo{
+		display: none;
+	}
+}
 @media screen and (min-width:1280px) {
     .menu>li>a{
 		
