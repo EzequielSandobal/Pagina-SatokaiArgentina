@@ -181,7 +181,7 @@
         </li>
         <li class="subseguinos">
           <!-- Icono de instagram -->
-          <i class="fab fa-instagram"><a href="https://t.ly/i7iH" target="_blank" title="link a cuenta de instagram de la escuela satokai argentina de karate">
+          <i class="fab fa-instagram"><a href="https://t.ly/i7iH" target="_blank" rel="noopener" title="link a cuenta de instagram de la escuela satokai argentina de karate">
               Instagram</a></i>
           <!-- Link de instagram de la pagina -->
         </li>
@@ -220,7 +220,7 @@
 
         <li id="sububi">
           <!-- Icono de ubicacion -->
-          <i class="fas fa-map-marked-alt"> Ubicacion</i></li>
+          <i class="fas fa-map-marked-alt" aria-hidden="true"> Ubicacion</i></li>
         <br>
         <li>
           <!-- Mapa que muestra ubicacion segun el link que se toque -->
@@ -240,9 +240,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
     integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
   </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
   <script type="text/javascript">
-    $(window).load(function () {
+    $(window).on('load', function () {
       $(".loader").fadeOut("slow");
     });
   </script>
